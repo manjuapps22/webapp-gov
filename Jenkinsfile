@@ -5,7 +5,7 @@ pipeline {
         maven 'Maven_3_5_2'  
     }
    stages{
-    stage('CompileandRunSonarAnalysis') {
+    stage('CompileandRunSonarAnalysisSAST') {
             steps {	
 		sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=devsecc -Dsonar.organization=devsecc -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=1cb3012bb822a45ef06681ba001bb7bb70694b1a'
 			}
