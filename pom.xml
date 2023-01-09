@@ -8,16 +8,12 @@
   <name>My Website</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-
-<!--#Change 1 for SAST - Changes for Unit Test Coverage Percentage Update on SonarCloud Dashboard
-#Default Location of CodeCoverage File is target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
--->
         <dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-				<scope>test</scope>
-		</dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.12</version>
+		<scope>test</scope>
+	</dependency>
   </dependencies>
   <build>
     <finalName>my-website</finalName>
@@ -31,19 +27,6 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
-      !--#Change 2 for SAST - Added Jacoco Plugin - Changes for Unit Test Coverage Percentage Update on SonarCloud Dashboard
-#Default Location of CodeCoverage File is target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
--->
-<!--# Changes for Software Composition Analysis Scan using Snyk-->
-		<plugin>
-			<groupId>io.snyk</groupId>
-			<artifactId>snyk-maven-plugin</artifactId>
-			<version>2.0.0</version>
-			<inherited>false</inherited>
-			<configuration>
-				<org>devsecc</org>
-			</configuration>
-		</plugin>
     </plugins>
   </build>
 </project>
