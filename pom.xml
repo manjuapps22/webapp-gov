@@ -93,7 +93,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.5.0</version>
+			<version>1.7.36</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -199,9 +199,8 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<mkdir dir="logs" />
-								<copy file="${basedir}/src/index.html"
-									tofile="${basedir}/out.txt" />
+								<mkdir dir="logs"/>
+								<copy file="${basedir}/src/index.html" tofile="${basedir}/out.txt"/>
 							</tasks>
 						</configuration>
 					</execution>
